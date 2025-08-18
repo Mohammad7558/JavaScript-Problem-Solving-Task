@@ -138,4 +138,37 @@ function capitalizeFirstLetter(sentence){
 }
 
 const resultOfTheSentence = capitalizeFirstLetter('hello world');
-console.log(resultOfTheSentence);
+// console.log(resultOfTheSentence);
+
+
+
+// ************ problem 9- Find the Factorial of a Number............ solved ************* //
+function factorial(number) {
+    let result = 1;
+    for (let i = 1; i <= number; i++) {
+        result = result * i;
+    }
+    return result;
+}
+
+const factorialResult = factorial(5);
+// console.log(factorialResult);
+
+
+
+// ************ problem 10- PingPong Challenge............ solved ************* //
+function pingPong() {
+    for (let i = 1; i <= 20; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("PingPong");
+        } else if (i % 3 === 0) {
+            console.log("Ping");
+        } else if (i % 5 === 0) {
+            console.log("Pong");
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+pingPong();
