@@ -67,4 +67,17 @@ const maxNumberResult = findMaxNumber(numberArray);
 
 // ************ problem 5- Remove Duplicates from an Array............ solved ************* //
 
-const duplicateArrayNumbers = [1, 2, 2, 3, 4, 4];
+const duplicateArrayNumbers = [1, 2, 2, 3, 4, 4, 4, 5];
+
+function removeDuplicateValueOfAnArray(array){
+    const newArray = [];
+    for(let i = 0; i < array.length; i++){
+        const value = array[i];
+        if(!newArray.includes(value)){
+            newArray.push(value)
+        }
+    }
+    return newArray;
+}
+const finalArray = removeDuplicateValueOfAnArray(duplicateArrayNumbers);
+// console.log(finalArray);
