@@ -1,5 +1,5 @@
 // ************ problem 1- reverse string............ solved ************* //
-function reverseString(value){
+function reverseString(value) {
     const reverseText = value.split('');
     const newReverseWay = reverseText.reverse();
     const newText = newReverseWay.join('');
@@ -10,15 +10,15 @@ const result = reverseString('hello');
 
 
 // ************ problem 2- check vowel count in string............ solved ************* //
-function countVowel(value){
+function countVowel(value) {
     let count = 0;
     const actualVowel = ['a', 'e', 'i', 'o', 'u'];
     const toLowerCaseText = value.toLowerCase();
-    for(let i = 0; i <= actualVowel.length; i++){
-        if(toLowerCaseText.includes(actualVowel[i])){
+    for (let i = 0; i <= actualVowel.length; i++) {
+        if (toLowerCaseText.includes(actualVowel[i])) {
             count = count + 1
         }
-        else{
+        else {
             // console.log('nai');
         }
     }
@@ -30,14 +30,14 @@ const vowelCountResult = countVowel('programming');
 
 // ************ problem 3- check Palindrome............ solved ************* //
 
-function checkWordPalindromeOrNot(palindromeWord){
+function checkWordPalindromeOrNot(palindromeWord) {
     const makeStringArray = palindromeWord.split('');
     const reverseTheArray = makeStringArray.reverse();
     const finalResult = reverseTheArray.join('');
-    if(palindromeWord.toLowerCase() === finalResult.toLowerCase()){
+    if (palindromeWord.toLowerCase() === finalResult.toLowerCase()) {
         return true
     }
-    else{
+    else {
         return false
     }
 }
@@ -51,10 +51,10 @@ const isPalindromeOrNot = checkWordPalindromeOrNot('madam');
 // ************ problem 4- check largest number of an array............ solved ************* //
 const numberArray = [15, 1, 9, 3];
 
-function findMaxNumber(numbers){
+function findMaxNumber(numbers) {
     let maxNumber = numbers[0];
-    for(let i = 0; i <= numbers.length; i++){
-        if(maxNumber < numbers[i]){
+    for (let i = 0; i <= numbers.length; i++) {
+        if (maxNumber < numbers[i]) {
             maxNumber = numbers[i];
         }
     }
@@ -69,11 +69,11 @@ const maxNumberResult = findMaxNumber(numberArray);
 
 const duplicateArrayNumbers = [1, 2, 2, 3, 4, 4, 4, 5];
 
-function removeDuplicateValueOfAnArray(array){
+function removeDuplicateValueOfAnArray(array) {
     const newArray = [];
-    for(let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         const value = array[i];
-        if(!newArray.includes(value)){
+        if (!newArray.includes(value)) {
             newArray.push(value)
         }
     }
@@ -85,11 +85,11 @@ const finalArray = removeDuplicateValueOfAnArray(duplicateArrayNumbers);
 
 // ************ problem 6- Sum of All Numbers in an Array............ solved ************* //
 
-const sumNumbersArray =  [1, 2, 3, 4];
+const sumNumbersArray = [1, 2, 3, 4];
 
-function sumOfAllArrayNumber(numbersArray){
+function sumOfAllArrayNumber(numbersArray) {
     let sum = 0;
-    for(let i = 0; i < numbersArray.length; i++){
+    for (let i = 0; i < numbersArray.length; i++) {
         sum = sum + numbersArray[i];
     }
     return sum;
@@ -97,3 +97,45 @@ function sumOfAllArrayNumber(numbersArray){
 
 const sumArrayNumbersResult = sumOfAllArrayNumber(sumNumbersArray);
 // console.log(sumArrayNumbersResult);
+
+
+
+
+// ************ problem 7- Find Even Numbers in an Array............ solved ************* //
+
+const evenNumberArray = [1, 2, 3, 4, 5, 6];
+
+function checkNumberIsEvenOrNot(evenNumberArray) {
+    const rawEvenNumber = [];
+    for (let i = 0; i < evenNumberArray.length; i++) {
+        const number = evenNumberArray[i];
+        if(number % 2 === 0){
+            rawEvenNumber.push(number)
+        }
+    }
+
+    return rawEvenNumber;
+}
+
+const resultEvenNumbers = checkNumberIsEvenOrNot(evenNumberArray);
+// console.log(resultEvenNumbers);
+
+
+// ************ problem 8- Capitalize First Letter of Each Word............ solved ************* //
+
+function capitalizeFirstLetter(sentence){
+    const makeSentenceArray = sentence.split(' ');
+    let finalResult = '';
+    for(let i = 0; i < makeSentenceArray.length; i++){
+        const theSingleWord = makeSentenceArray[i];
+        const makeUpperCase = theSingleWord.charAt(0).toUpperCase();
+        const sliceText = theSingleWord.slice(1);
+        const result = makeUpperCase + sliceText;
+        finalResult = finalResult +  result + ' ';
+    }
+    return finalResult.trim();
+    
+}
+
+const resultOfTheSentence = capitalizeFirstLetter('hello world');
+console.log(resultOfTheSentence);
