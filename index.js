@@ -81,3 +81,19 @@ function removeDuplicateValueOfAnArray(array){
 }
 const finalArray = removeDuplicateValueOfAnArray(duplicateArrayNumbers);
 // console.log(finalArray);
+
+
+// ************ problem 6- Sum of All Numbers in an Array............ solved ************* //
+
+const sumNumbersArray =  [1, 2, 3, 4];
+
+function sumOfAllArrayNumber(numbersArray){
+    let sum = 0;
+    for(let i = 0; i < numbersArray.length; i++){
+        sum = sum + numbersArray[i];
+    }
+    return sum;
+}
+
+const sumArrayNumbersResult = sumOfAllArrayNumber(sumNumbersArray);
+// console.log(sumArrayNumbersResult);
