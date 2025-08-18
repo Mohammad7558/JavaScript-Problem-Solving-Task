@@ -14,18 +14,17 @@ function countVowel(value) {
     let count = 0;
     const actualVowel = ['a', 'e', 'i', 'o', 'u'];
     const toLowerCaseText = value.toLowerCase();
-    for (let i = 0; i <= actualVowel.length; i++) {
-        if (toLowerCaseText.includes(actualVowel[i])) {
-            count = count + 1
-        }
-        else {
-            // console.log('nai');
+
+    for (let i = 0; i < toLowerCaseText.length; i++) {
+        if (actualVowel.includes(toLowerCaseText[i])) {
+            count++;
         }
     }
-    return count
+    return count;
 }
+
 const vowelCountResult = countVowel('programming');
-// console.log(vowelCountResult);
+console.log(vowelCountResult);
 
 
 // ************ problem 3- check Palindrome............ solved ************* //
@@ -53,7 +52,7 @@ const numberArray = [15, 1, 9, 3];
 
 function findMaxNumber(numbers) {
     let maxNumber = numbers[0];
-    for (let i = 0; i <= numbers.length; i++) {
+    for (let i = 0; i < numbers.length; i++) {
         if (maxNumber < numbers[i]) {
             maxNumber = numbers[i];
         }
@@ -160,13 +159,13 @@ const factorialResult = factorial(5);
 function pingPong() {
     for (let i = 1; i <= 20; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
-            console.log("PingPong");
+            // console.log("PingPong");
         } else if (i % 3 === 0) {
-            console.log("Ping");
+            // console.log("Ping");
         } else if (i % 5 === 0) {
-            console.log("Pong");
+            // console.log("Pong");
         } else {
-            console.log(i);
+            // console.log(i);
         }
     }
 }
