@@ -9,6 +9,9 @@ const result = reverseString('hello');
 // console.log(result);
 
 
+
+
+
 // ************ problem 2- check vowel count in string............ solved ************* //
 function countVowel(value) {
     let count = 0;
@@ -27,6 +30,13 @@ const vowelCountResult = countVowel('programming');
 console.log(vowelCountResult);
 
 
+
+
+
+
+
+
+
 // ************ problem 3- check Palindrome............ solved ************* //
 
 function checkWordPalindromeOrNot(palindromeWord) {
@@ -43,6 +53,8 @@ function checkWordPalindromeOrNot(palindromeWord) {
 
 const isPalindromeOrNot = checkWordPalindromeOrNot('madam');
 // console.log(isPalindromeOrNot);
+
+
 
 
 
